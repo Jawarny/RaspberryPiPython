@@ -1,0 +1,65 @@
+[
+  {
+    "noCommande": "001",
+    "noClient": "CLI001",
+    "NomClient": "Simon Deschenes",
+    "noProduit": "PRO001",
+    "NomProduit": "Réchaud CampStove 2",
+    "PrixUnitaire": "152.95",
+    "qteCommandée": "1"
+  },
+  {
+    "noCommande": "002",
+    "noClient": "CLI002",
+    "NomClient": "Martine Lafontaine",
+    "noProduit": "PRO002",
+    "NomProduit": "Poêlon Litech",
+    "PrixUnitaire": "31.45",
+    "qteCommandée": "4"
+  },
+  {
+    "noCommande": "003",
+    "noClient": "CLI002",
+    "NomClient": "Martine Lafontaine",
+    "noProduit": "PRO003",
+    "NomProduit": "Casserole en céramique",
+    "PrixUnitaire": "74.95",
+    "qteCommandée": "2"
+  },
+  {
+    "noCommande": "004",
+    "noClient": "CLI003",
+    "NomClient": "John Doe",
+    "noProduit": "PRO004",
+    "NomProduit": "Sachet de chili végétarien",
+    "PrixUnitaire": "11.99",
+    "qteCommandée": "10"
+  },
+  {
+    "noCommande": "005",
+    "noClient": "CLI004",
+    "NomClient": "Astrid Forsberg",
+    "noProduit": "PRO005",
+    "NomProduit": "Granola aux framboises et à la vanille",
+    "PrixUnitaire": "5.99",
+    "qteCommandée": "12"
+  },
+  {
+    "noCommande": "006",
+    "noClient": "CLI004",
+    "NomClient": "Astrid Forsberg",
+    "noProduit": "PRO006",
+    "NomProduit": "Régal au chia, amandes et canneberges",
+    "PrixUnitaire": "5.99",
+    "qteCommandée": "6"
+  },
+  {
+    "noCommande": "007",
+    "noClient": "CLI004",
+    "NomClient": "Astrid Forsberg",
+    "noProduit": "PRO007",
+    "NomProduit": "Sachet de riz à la Bengale",
+    "PrixUnitaire": "11.99",
+    "qteCommandée": "5"
+  }
+]

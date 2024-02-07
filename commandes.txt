@@ -1,0 +1,7 @@
+001%CLI001%Simon Deschenes%PRO001%Réchaud CampStove 2%152.95%1
+002%CLI002%Martine Lafontaine%PRO002%Poêlon Litech%31.45%4
+003%CLI002%Martine Lafontaine%PRO003%Casserole en céramique%74.95%2
+004%CLI003%John Doe%PRO004%Sachet de chili végétarien%11.99%10
+005%CLI004%Astrid Forsberg%PRO005%Granola aux framboises et à la vanille%5.99%12
+006%CLI004%Astrid Forsberg%PRO006%Régal au chia, amandes et canneberges%5.99%6
+007%CLI004%Astrid Forsberg%PRO007%Sachet de riz à la Bengale%11.99%5

@@ -1,0 +1,29 @@
+[
+  {
+    "_comment": "Réponse A",
+    "q": "Pour utiliser les objets connectés, on va utiliser lequel des nano-ordinateurs?",
+    "a": "Raspberry Pi",
+    "b": "Arduino",
+    "c": "Banana Pi",
+    "rep": "a",
+    "pts": 2
+  },
+  {
+    "_comment": "Réponse C",
+    "q": "Dans le cours, on va utiliser quel langage de programmation?",
+    "a": "Java",
+    "b": "C++",
+    "c": "Python",
+    "rep": "c",
+    "pts": 2
+  },
+  {
+    "_comment": "Réponse A",
+    "q": "Quelle environnement de développement on utilise dans le cours?",
+    "a": "Visual Studio Code",
+    "b": "Eclipse",
+    "c": "Android Studio",
+    "rep": "a",
+    "pts": 1
+  }
+]
