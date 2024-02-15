@@ -17,12 +17,17 @@ print("Votre nom est : " + nom)
 #  How to initialize values :
 
 nom = "Elias"	
-nombre = 1 		# nombre est de type int
-nombre = "un" 	# nombre est de type string
-nom = str(1) 	# nombre est de type string '1' (Char)
-nom = str(10)	# nombre est de type string "10" (Char)
-nombre = int(1) # nombre est de type int 1
-reel = float(1) # nombre est de type float 1.0
+nombre = 1 		    # nombre est de type int                    # ceci est équivalent a la ligne 25c
+nombre = "un" 	    # nombre est de type string
+nom = str(1) 	    # nombre est de type string '1' (Char)      # Aussi appeler Casting
+nom = str(10)	    # nombre est de type string "10" (string)   # Aussi appeler Casting
+nom = str(1.0)      # nombre est de type string "1.0" (string)  # Aussi appeler Casting
+nombre = int(1)     # nombre est de type int 1                  # Aussi appeler Casting
+nombre = int("1")   # nombre est de type int 1                  # Aussi appeler Casting
+
+reel = float(1)     # nombre est de type float 1.0              # Aussi appeler Casting
+reel = float("1")   # nombre est de type float 1.0              # Aussi appeler Casting
+reel = float("1.0") # nombre est de type float 1.0              # Aussi appeler Casting
 
 
 #  How to know the type of a value : 
@@ -40,6 +45,26 @@ bool
 list, truple, range, dict, set # Structure de donnée
 """
 
+"""
++                   pour faire une addition, une combinaison de string ou peut aussi l’utiliser pour fusionner au moins deux listes
+-                   pour faire une différence.
+*                   Multiplication
+/                   fait la division et retourne un nombre à décimal.
+//                  fait la division, mais arrondi à l’entier inférieur
+**                  Permet de calculer la puissance
+%                   Permet de calculer le module
+<, >, >=, <=        l’évaluation de la condition.
+"""
+
+"""
+and, is             Retourne True si les deux valeurs sont vraies
+or                  Retourne False si les deux valeurs sont fausse
+not                 Retourne True si le résultat est faux
+in                  Retourne True si une séquence avec une valeur spécifique est présente dans l’objet. 
+=                   Permet d’affecter une valeur à une variable 
+"""
+print("hello" * 3)              #Affichera hellohellohello
+#print("hello " * "world")      #Affichera une erreur peut pas multiplier une string avec une string seulement avec un int.
 
 #  --Strings!
 
@@ -85,6 +110,64 @@ format = (5,5,"dix")
 print("%d + %d = %s" %format)                                                               #Affichera 5 + 5 = Dix
 print("{chiffre00} + {chiffre01} = {mot00}".format(chiffre00=5,chiffre01=5, mot="dix"))     #Affichera 5 + 5 = Dix
 
+valeur = True
+valeur2 = False
+print(valeur)               #Affichera True
+print(valeur2)              #Affichera False
+print(valeur is valeur2)    #Is est utiliser ici comme un ET comme un & comme un AND (True ET False = False) #Affichera False
+print(valeur2 is valeur)    #Affichera False
+print(valeur is valeur)     #Affichera True
+if valeur: print("Vrai!")   #Afficera le print : Vrai!
+if valeur2: print("Faux")   #Affiche rien car la condition est Fausse donc rentre meme pas dans le if
+
+#if valeur:                 # ne pas oublier les (:)
+    #code                   #contenu en tab pour etre dans le if
+#elif valeur:               #elif c'est comme le else if dans java
+    #code
+    #break                  #peut utiliser un break malgré que ce n'est pas nécessaire
+#else                       #le else à aussi besoin des deux points (:)
+
+notes = [89,78,0,60,64]             # creation d'un tableau
+for i in notes:
+    if i == 60:
+        break                       # quitte si c'est vrai!
+    elif i >= 80:
+        continue                    # utilisation de continue
+    print("élement à l'index " + str(notes.index(i)) + " : " + str(i))  
+    #Naffiche pas 89 puisquil est plus grand que 80 il retourne a la boucle sans continuer
+    #Affichera ligne1: élement à l'index 1 : 78 
+    #Affichera ligne2; élement à l'index 2 : 0
+    #Naffiche pas 60 car le break le fait sortir de la boucle for
+    
+#boucle while
+from time import sleep
+temperature = 7
+
+while temperature > 0:
+    temperature = temperature - 1
+    #temperature--                  #n'existe pas en python
+    print("L'eay est à " + str(temperature) + " degrés\n" +
+          "L'eau doit être plus froide pour former de la glace.")
+    sleep(1)            #permet de faire une pause de 1 seconde
+print("L'eau est à " + str(temperature) + ". Elle devrait se transformer en glace!")
+
+#Affichera la temperature de leau de 6 a 1 avec le message et des intervales de 1 secondes ensuite affichera 0 directement.
+
+age = 26
+#texte = "mon nom est Elias et j'ai " + 26 + " ans."            #ERREUR puisqu'il va essayer d'additionner 26 au string il y a erreur.
+texte = "mon nom est Elias et j'ai " + str(26) + " ans."        #on peut faire ça ou 
+print(texte)                                                    #affichera mon nom est Elias et j'ai 26 ans.
+
+texte = "mon nom est Elias et j'ai {} ans."                     
+print(texte.format(age))                                        #affichera mon nom est Elias et j'ai 26 ans.
+
+quantite = 4
+noProduit = 123
+prixProduit = 4.50
+prixProduitFormate = "{:.2f}$".format(prixProduit)                                      # formatter un chiffre et garder 2 chiffre apres la virgule
+totalFormate = "{:.2f}$".format(quantite*prixProduit)                                   # formatter un chiffre et garder 2 chiffre apres la virgule
+commande = "Commande du produit {1} pour {0} items au prix de {2} à un total de {3}"    # voila comment afficher des valeurs avec format dans l'ordre voulu
+print(commande.format(quantite, noProduit, prixProduitFormate, totalFormate))           # les valeurs peuvent etre placer comme voulu il faut juste sassurer quon les met a la bonne place
 
 
 text = "Hey, j'ai 15 ans."

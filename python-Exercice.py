@@ -2,13 +2,14 @@
 stop = False
 def exercise1():
     try:
+        print("Exercice - 02- python introduction page 5\n")
         #  Exercice - 02- python introduction page 5 
             # Vous devez créer un programme qui permet de saisir votre nom et de l’afficher à l’écran.
                 #◦ Déclarez trois variables : une variable String, une variable Int et une variable Float.
                 #◦ Affichez à l’écran le type des trois variables.
                 #◦ Faites une conversion de la variable Int en Float et affichez le résultat.
                 #◦ Faites une conversion de la variable Float en Int et affichez le résultat.
-        print("Exercice - 02- python introduction page 5\n")
+        
         nom = input("Entrer votre nom : ")
         if nom.upper() == "JY":
             nom = "Jawarny"
@@ -26,13 +27,14 @@ def exercise1():
         
 def exercise2():
     try:
+        print("Exercice - 02- python introduction page 12\n")
         #  Exercice - 02- python introduction page 12 
             #◦ Vous devez créer un programme qui permet de saisir le nom du cours, votre nom et le numéro du programme à l’écran.
                 #◦ Affichez la longueur de la chaîne de caractères du nom du cours à l’écran
                 #◦ Affichez une partie de la chaîne de caractères en utilisant les sous-chaînes
                 #◦ Affichez les trois variables saisies à l’écran en utilisant les trois formatages possibles.
 
-        print("Exercice - 02- python introduction page 12\n")
+        
         cours = input("Entrer le nom de votre cours : ") # Programmation Python dans un environnement linux avec un raspberry Pi
         if cours.upper() == "JY":
             cours = "Programmation Python dans un environnement linux avec un raspberry Pi"
@@ -64,7 +66,55 @@ def exercise2():
         return str(e)
         #Fin de l'exercice
 
-#def exercise3():
+def exercise3():
+    try:
+        print("Exercice - 02- python introduction page 21\n")
+        #◦ Vous devez créer un programme qui permet de saisir et valider des notes numériques d’un cours.
+            #◦ Les notes doivent être entre 0 et 100 inclusivement et misent dans une liste.
+            #◦ Pour sortir du programme, vous devez écrire -1 comme note.
+            #◦ Ensuite, vous devez calculer la moyenne des notes
+            #◦ On affiche la moyenne avec deux chiffres après la virgule en utilisant la fonction format
+        motNumero = ["première", "deuxième", "troisième", "quatrième", "cinquième",
+                    "sixième", "septième", "huitième", "neuvième", "dixième",
+                    "onzième", "douzième", "treizième", "quatorzième", "quinzième",
+                    "seizième", "dix-septième", "dix-huitième", "dix-neuvième", "vingtième"]
+        #motNumero = ["première", "deuxième", "troisième", "quatrième", "cinquième"]
+        sortie = 0
+        notes = []
+        
+        print("Ceci est un programme pour vous aider a calculer votre moyenne générale!")
+        sortie = input("Entrer votre " + motNumero[len(notes)] + " note :\t")                                          # entrer premiere note pour la premiere fois
+        while len(notes) < 2:                                                                  # tant qu'il y a pas minimum 2 notes on fais pas la moyenne
+            if not sortie.isdigit() or not (0 <= int(sortie) <= 100):                                                            # si la premiere note rentrer est pas valide entrer une nouvelle
+                print("⚠ ERREUR! Veuillez entrez une note valide entre 0 et 100!\n")
+            else:
+                notes.append(int(sortie))                                                                #rentrer la premiere note si bonne 
+            
+            if len(notes) < 2:
+                sortie = input("Entrer votre " + motNumero[len(notes)] + " note :\t")
+            
+        sortie = input("Entrer (-1) pour terminer ou \n" +
+                       "Entrer votre " + motNumero[len(notes)] + " note :\t")
+            
+        while sortie != '-1':    
+            if not sortie.isdigit() or not (-1 <= int(sortie) <= 100):                                    # si la premiere note rentrer est pas valide entrer une nouvelle
+                print("⚠ ERREUR! Veuillez entrez une note valide entre 0 et 100!\n")
+            elif 0 <= int(sortie) <= 100:
+                notes.append(int(sortie))                                                                #rentrer la premiere note si bonne 
+            
+            if len(notes) < 20:
+                sortie = input("Entrer (-1) pour terminer ou \n" +
+                               "Entrer votre " + motNumero[len(notes)] + " note :\t")
+            else:
+                print("AVERTISSEMENT! Le logiciel peut juste traiter 20 notes à la fois!\n\n")
+                sortie = '-1'
+           
+        print("De la {} note à la {} note vous avez une moyenne de {:.2f}%".format(motNumero[0], motNumero[len(notes)-1],calculerMoyenne(notes)))      
+        print("\n\n\n")
+    except Exception as e:
+        return str(e)
+        #Fin de l'exercice
+        
 #def exercise4():
 #def exercise5():
 #def exercise6():
@@ -92,7 +142,12 @@ def exercise2():
 #def exercise28():
 #def exercise29():
 
-
+def calculerMoyenne(tableMoyenne):
+    total = 0
+    for note in tableMoyenne:
+        total = total + note
+    moyenne = total/ len(tableMoyenne)
+    return moyenne 
 
 
 
@@ -100,8 +155,10 @@ while not stop:
     print("Menu:\n"+
           "\t1. Exercice - 02- python introduction page 5\n"+
           "\t2. Exercice - 02- python introduction page 12\n"+
+          "\t3. Exercice - 02- python introduction page 21\n"+
           "\t69. Stop\n")
-    choice = input("Entrer le numero de l'exercice que vous voulez executer ou tapez 'stop' pour arrêter le programme: ")
+    choice = input("Entrer le numero de l'exercice que vous voulez executer ou tapez 'stop' pour arrêter le programme: ") #PROD
+    #choice = '3' #DEV
     if choice == '1':  
         error_message = exercise1()
         if error_message:
@@ -110,6 +167,10 @@ while not stop:
         error_message = exercise2()
         if error_message:
             print("Error occurred in 2. Exercice - 02- python introduction page 12:", error_message)
+    elif choice == '3':  
+        error_message = exercise3()
+        if error_message:
+            print("Error occurred in 3. Exercice - 02- python introduction page 21:", error_message)
     elif choice.lower() == "stop" or choice == '69' or choice.lower() == "quit" or choice.lower() == "quitter" or choice.lower() == "arrete":
         stop = True
     else:
