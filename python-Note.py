@@ -48,7 +48,7 @@ print(var)						#Affichera bonjour
 print(var[0])					#Affichera b
 print(var.replace('b','p'))		#Affichera ponjour
 print(var.capitalize())			#Affichera Bonjour
-print(var.upperr())				#Affichera BONJOUR
+print(var.upper())				#Affichera BONJOUR
 print(','.join(var))			#Affichera b,o,n,j,o,u,r  //prend la valeur dans le '' et separe le tout avec.
 print(var[1:3])					#Affichera on //commence a la valeur 1 (inclusivement) affiche jusqua 3 (exclusivement)
 print(var[0:-1])				#Affichera bonjou //commence a la valeur 0 (inclusivement) affiche tout supprimant -(1) caractere
@@ -63,16 +63,30 @@ print(len(var))					#Affichera 7 //la longueur de la string en int
 var = "bonjour tout le monde"
 print(var.split())				#Affichera ['bonjour', 'tout', 'le', 'monde']
 var = " bonjour tout le monde "
-print(var.split())				#Affichera ['','bonjour', 'tout', 'le', 'monde','']
+print(var.split(" "))			#Affichera ['','bonjour', 'tout', 'le', 'monde','']
 print(var.strip())				#Affichera "bonjour tout le monde"
 
+var = "Bonjour"
+for char in var:
+    print(char)                 #Affichera chaque lettre de bonjour sur une ligne avec la boucle.
+if var < nom:                   #La comparaison de plus petit ou plus grand compare seulement le premier caractère de chaque string en unicode.
+    place = " est avant "       #L'unicode qui est le plus petite sera placé avant dans cet exemple.
+elif var > nom:                 #En d'autre mot aB < B = False  AB < B = True car A est l'unicode le plus petit suivi de B ensuite a (minuscule).
+    place = " est après "
+else:
+    place =  " est à la même place que "
+print("Le mot " + var + place + nom)
+
+#print(2 + " + " + 2 + " = Quatre")  #Affichera un message d'erreur puisque pour afficher des strings avec des ints ou autre elle doit être converti avant
+print(str(2) + " + " + str(2) + " = Quatre") #Affichera 2 + 2 = Quatre
+
+print("%d + %d = %s" %(5,5,"dix"))                                                          #Affichera 5 + 5 = Dix
+format = (5,5,"dix")    
+print("%d + %d = %s" %format)                                                               #Affichera 5 + 5 = Dix
+print("{chiffre00} + {chiffre01} = {mot00}".format(chiffre00=5,chiffre01=5, mot="dix"))     #Affichera 5 + 5 = Dix
 
 
 
-#  Exercice -
-
-nom = input("entrer votre nom : ")
-print(nom)
 text = "Hey, j'ai 15 ans."
 print(text[0:3])
 print(text[0:-5], "pommes.")

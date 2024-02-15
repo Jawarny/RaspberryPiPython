@@ -1,7 +1,7 @@
 
 language = list("c#", "python", "java", "sql")
 nombres = list([45,76,89,-1,23])
-nombres2 = list([45,76,89,-1,23])
+nombres2 = [45,76,89,-1,23]
 
 print ("parcourir avec boucle while")
 [print(i) for i in language]
