@@ -1,0 +1,16 @@
+{
+  "personne": [
+    {
+      "Nom": "Simon",
+      "Language": ["Java", "PHP", "Python"]
+    },
+    {
+      "Nom": "Elias",
+      "Language": ["Java", "C#", "Python"]
+    },
+    {
+      "Nom": "John",
+      "Language": ["Basic", "Pascal", "Python"]
+    }
+  ]
+}

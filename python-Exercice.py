@@ -83,24 +83,28 @@ def exercise3():
         notes = []
         
         print("Ceci est un programme pour vous aider a calculer votre moyenne générale!")
-        sortie = input("Entrer votre " + motNumero[len(notes)] + " note :\t")                                          # entrer premiere note pour la premiere fois
-        while len(notes) < 2:                                                                  # tant qu'il y a pas minimum 2 notes on fais pas la moyenne
-            if not sortie.isdigit() or not (0 <= int(sortie) <= 100):                                                            # si la premiere note rentrer est pas valide entrer une nouvelle
+        sortie = input("Entrer votre " + motNumero[len(notes)] + " note :\t")     
+        if sortie.upper() == "JY":
+            notes = [89,80, 95, 96, 87, 87, 85, 88, 81, 97, 72, 99, 95, 100, 97, 88, 61, 81]
+            sortie = '-1'
+        while len(notes) < 2:                                                                  
+            if not sortie.isdigit() or not (0 <= int(sortie) <= 100):                                                  
                 print("⚠ ERREUR! Veuillez entrez une note valide entre 0 et 100!\n")
             else:
-                notes.append(int(sortie))                                                                #rentrer la premiere note si bonne 
+                notes.append(int(sortie))                                                                
             
             if len(notes) < 2:
                 sortie = input("Entrer votre " + motNumero[len(notes)] + " note :\t")
-            
-        sortie = input("Entrer (-1) pour terminer ou \n" +
-                       "Entrer votre " + motNumero[len(notes)] + " note :\t")
+        
+        if sortie != '-1':    
+            sortie = input("Entrer (-1) pour terminer ou \n" +
+                        "Entrer votre " + motNumero[len(notes)] + " note :\t")
             
         while sortie != '-1':    
-            if not sortie.isdigit() or not (-1 <= int(sortie) <= 100):                                    # si la premiere note rentrer est pas valide entrer une nouvelle
+            if not sortie.isdigit() or not (-1 <= int(sortie) <= 100):                                   
                 print("⚠ ERREUR! Veuillez entrez une note valide entre 0 et 100!\n")
             elif 0 <= int(sortie) <= 100:
-                notes.append(int(sortie))                                                                #rentrer la premiere note si bonne 
+                notes.append(int(sortie))                                                               
             
             if len(notes) < 20:
                 sortie = input("Entrer (-1) pour terminer ou \n" +

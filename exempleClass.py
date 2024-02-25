@@ -24,3 +24,4 @@ etu1.affichageEtudiant()
 etu2 = Etudiant("John Doe", "DOEJ123456", 333)
 listeEtudiants = [etu1,etu2]
 print (listeEtudiants)
+
