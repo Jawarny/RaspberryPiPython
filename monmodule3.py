@@ -2,24 +2,31 @@
 import json;
 import codecs;
 
-nomFichier = "resultat.json"
+nomFichier = "resultat3.json"
 
 try:
     with codecs.open(nomFichier, "r", encoding="utf-8") as fichierJson:
         lesParties = json.load(fichierJson)
 except FileNotFoundError:
-    lesParties = {"résultat": []}
+    #lesParties = {"résultat": []}
+    lesParties = []
 
 i = 0
-#dictionnaire
+
+# New entry to append
 nouveauJoueur = {
-    "nom": "Elias LOL",
-    "age": 12,
-    "pays": "quebec"
-}  
+        "résultat": [
+            {
+                "nom": "Simon Deschennes",
+                "age": 45,
+                "pays": "Canada"
+            }
+        ]
+    }
 
 while i < 4:
-    lesParties["résultat"].append(nouveauJoueur) 
+      #lesParties["résultat"].append(nouveauJoueur)   
+    lesParties.append(nouveauJoueur)
     i+=1  
 
 # Write the data to the file (overwriting the existing content)
