@@ -1,3 +1,12 @@
+ #╔, ═, ╦, ╗, ╚,  ═, ╩, ╝, ╠, ╬, ╣, ║
+ 
+ #╔══════════════════════════════════════════════════════════╗
+ #║                                                          ║
+ #╠══════════════════════════════════════════════════════════╣
+ #║                                                          ║
+ #╚══════════════════════════════════════════════════════════╝
+
+
 #  How to comment :
 #  comemnt on that
 
@@ -169,6 +178,98 @@ totalFormate = "{:.2f}$".format(quantite*prixProduit)                           
 commande = "Commande du produit {1} pour {0} items au prix de {2} à un total de {3}"    # voila comment afficher des valeurs avec format dans l'ordre voulu
 print(commande.format(quantite, noProduit, prixProduitFormate, totalFormate))           # les valeurs peuvent etre placer comme voulu il faut juste sassurer quon les met a la bonne place
 
+#Tableau!
+
+languages = [
+    "C#", "Java", "Python", "HTML", "Cascading Style Sheets",
+    "Javascript", "Node.js", "MySQL", "SQL", "SQLite",
+    "PHP", "XML", "Rust", "Go", "Swift",
+    "Scratch", "Lua", "Pascal", "C", "C++",
+    "Bootstrap", "ABAP", "ActionScript", "Ada", "ALGOL",
+    "Alice", "APL", "ASP / ASP.NET", "Assembly language", "Awk",
+    "BBC Basic", "COBOL", "D", "Delphi", "Dreamweaver",
+    "Erlang and Elixir", "F#", "Forth", "Fortran", "Functional programming",
+    "Haskell", "IDL", "INTERCAL", "jQuery", "Kotlin",
+    "LabVIEW", "Lisp", "Logo", "MATLAB", "MetaQuotes language",
+    "ML", "Modula-3", "MS Access", "NXT-G", "Objective-C",
+    "OCaml", "Perl", "PL/I", "PL/SQL", "PostgreSQL",
+    "PostScript", "Prolog", "Pure Data", "Python", "R",
+    "RapidWeaver", "RavenDB", "Rexx", "Ruby on Rails", "S-PLUS",
+    "SAS", "Scala", "Sed", "SGML", "Simula",
+    "Smalltalk", "SMIL", "SNOBOL", "SSI", "Stata",
+    "Tcl/Tk", "TeX and LaTeX", "Unified Modeling Language", "Unix shells", "Verilog",
+    "VHDL", "Visual Basic", "Visual FoxPro", "VRML", "WAP/WML"]
+print(languages[0])         # Afficherass "C#"
+print(languages[4])         # Afficherass "Cascading Style Sheets"
+print(languages[-2])        # Affichera la deuxieme valeur du tableau de la fin donc "VRML"
+print(languages[3:6])       # Affichera les valeurs de l'index 3 inclusivement à l'index 6 exclusivement donc affichera  ['HTML', 'Cascading Style Sheets', 'Javascript']
+languages.pop()             # Enlevera le dernier élément de la liste => "WAP/WML"
+languages.pop(1)            # Enlevera la valeur dans l'index dans la parenthèse => "Java"
+languages.clear()           # vide la liste languages de tout son contenu
+print(languages)            # Affichera []
+del languages               # Supprime la variable!
+print(languages)            # NameError: name 'languages' is not defined  puisqu'elle a été supprimer
+
+
+listeNoms = ["Lysa", "Elie Anne", "Elias", "Philippe"]
+listeAutreNom = ["Khalid", "Latifa", "Naim"]
+
+listeNoms = listeNoms + ["Micheline", "Adam", "Paolo"]              # Ajoute la liste a la liste initiale.
+print(listeNoms)                                                    # Affichera ["Lysa", "Elie Anne", "Elias", "Philippe", "Micheline", "Adam", "Paolo"]
+listeNoms.append("Suhas")                                           # Ajouteras "Suhas" à la fin de la liste.
+print(listeNoms)                                                    # Affichera ['Lysa', 'Elie Anne', 'Elias', 'Philippe', 'Micheline', 'Adam', 'Paolo', 'Suhas']
+listeNoms.insert(-3,"Basiliki")                                     # Ajoutera le nom "Basiliki" après  de l'index -3 commençant de la fin, c'est à dire sera a l'index -4
+print(listeNoms)                                                    # Affichera ['Lysa', 'Elie Anne', 'Elias', 'Philippe', 'Micheline', 'Basiliki', 'Adam', 'Paolo', 'Suhas']
+listeNoms.insert(3,"Sadaf")                                         # Ajoutera le nom "Sadaf" exactement a l'index 3
+print(listeNoms)                                                    # Affichera ['Lysa', 'Elie Anne', 'Elias', 'Sadaf', 'Philippe', 'Micheline', 'Basiliki', 'Adam', 'Paolo', 'Suhas']
+listeNoms.insert(3,"Suhas")                                         # J'ajoute  un nom a l'index 3 pour qu'il soit en double
+print(listeNoms)                                                    # Affichera ['Lysa', 'Elie Anne', 'Elias', 'Suhas', 'Sadaf', 'Philippe', 'Micheline', 'Basiliki', 'Adam', 'Paolo', 'Suhas']
+listeNoms.remove("Suhas")                                           # Supprimera la premiere occurence du nom "Suhas" et garde tout les autres
+print(listeNoms)                                                    # Affichera ['Lysa', 'Elie Anne', 'Elias', 'Sadaf', 'Philippe', 'Micheline', 'Basiliki', 'Adam', 'Paolo', 'Suhas']
+listeNoms.sort()                                                    # Arrangera la liste en ordre alphabetic de A à Z
+print(listeNoms)                                                    # Affichera ['Adam', 'Basiliki', 'Elias', 'Elie Anne', 'Lysa', 'Micheline', 'Paolo', 'Philippe', 'Sadaf', 'Suhas']
+listeNoms.sort(reverse=True)                                        # Arrangera la liste en ordre alphabetic de Z à A
+print(listeNoms)                                                    # Affichera ['Adam', 'Basiliki', 'Elias', 'Elie Anne', 'Lysa', 'Micheline', 'Paolo', 'Philippe', 'Sadaf', 'Suhas']
+                                   
+listeNoms.append("alex")                                            
+listeNoms.append("Alex")    
+listeNoms.sort()                                                    # IMPORTANT A-Z en majuscule sera toujours mis avant les lettre minuscule Martin serais avant alex
+print(listeNoms)                                                    # Affichera ['Adam', 'Alex', 'Basiliki', 'Elias', 'Elie Anne', 'Lysa', 'Micheline', 'Paolo', 'Philippe', 'Sadaf', 'Suhas', 'alex', 'alexandre']
+
+nouvelleListeNoms = list(["Alex", "Jean-François", listeAutreNom ]) # Créer une liste avec les deux noms et a l'index 2 il y aura le tableau listeAutreNom
+print(nouvelleListeNoms)                                            # Affichera ["Alex", "Jean-François",["Khalid", "Latifa", "Naim"]]
+
+nouvelleListeNoms = list(["Alex", "Jean-François"])                 
+nouvelleListeNoms.extend(listeAutreNom)                             # la bonne façon de le faire pour qu'il ajoute les valeurs c'est comme ça
+print(nouvelleListeNoms)                                            # Affichera ['Alex', 'Jean-François', 'Khalid', 'Latifa', 'Naim']
+
+nouvelleListeNoms = list(["Alex", "Jean-François", "Khalid", "Latifa", "Naim"])     
+print("\n") 
+
+for nom in nouvelleListeNoms:                       # Affiche chaque nom de la liste sur une ligne.
+    print(nom)
+print("\n")    
+
+[print(i) for i in nouvelleListeNoms]               # Affiche chaque nom de la liste sur une ligne.
+print("\n")      
+
+for index in range(len(nouvelleListeNoms)):         # Affiche chaque nom de la liste sur une ligne.
+    print(nouvelleListeNoms[index])
+print("\n")     
+
+for index in range(len(nouvelleListeNoms)):          # Affiche un numéro avec chaque nom de la liste sur une ligne.
+    print(str(index + 1) + " " + nouvelleListeNoms[index])
+print("\n")     
+
+for index, name in enumerate(nouvelleListeNoms):    # Affiche un numéro avec chaque nom de la liste sur une ligne.
+    print(str(index + 1) + " " + name)
+print("\n")   
+
+index = 0
+while index < len(nouvelleListeNoms):              # Affiche un numéro avec chaque nom de la liste sur une ligne.
+    print(str(index + 1) + " " + nouvelleListeNoms[index])
+    index = index + 1
+print("\n")
 
 text = "Hey, j'ai 15 ans."
 print(text[0:3])
