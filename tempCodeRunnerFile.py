@@ -1,4 +1,4 @@
-<<<<<<< HEAD
-"résultat": []
-=======
->>>>>>> 7048ab3ba49c435bb995782f8a72c5dafa4cc1d3
+languages.clear()           # vide la liste languages de tout son contenu
+print(languages)            # Affichera 
+del languages       
+#print(languages)            # NameError: name 'languages' is not defined  puisqu'elle a été supprimer
