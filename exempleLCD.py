@@ -23,6 +23,7 @@ def initialisationJawarny():
     LCD1602.init(0x27, 1)
     changerMessageEnTableau(message)
     afficherMessage(debut, tableauMessage, ligne )
+     
     
 def fin():
     GPIO.cleanup()
